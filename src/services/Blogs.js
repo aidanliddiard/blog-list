@@ -1,6 +1,6 @@
 import { checkError, client } from './client';
 
-export async function fetchCats() {
-  const resp = await client.from('cats').select('*');
+export async function fetchBlogs() {
+  const resp = await client.from('blogs').select('*');
   return checkError(resp);
 }

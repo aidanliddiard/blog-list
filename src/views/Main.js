@@ -6,11 +6,12 @@ import BlogCard from '../components/BlogCard/BlogCard';
 
 export default function Main() {
   const [blogs, setBlogs] = useState([]);
-  //const [blog, setBlog] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const resp = await fetchBlogs();
+      console.log(resp);
+      console.log(resp[0].author_id.name);
       setBlogs(resp);
     };
     fetchData();

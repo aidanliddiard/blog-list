@@ -10,8 +10,6 @@ export default function Main() {
   useEffect(() => {
     const fetchData = async () => {
       const resp = await fetchBlogs();
-      console.log(resp);
-      console.log(resp[0].author_id.name);
       setBlogs(resp);
     };
     fetchData();

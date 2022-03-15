@@ -4,6 +4,6 @@ import App from './App';
 
 test('fetches the list of blogs', async () => {
   render(<App />);
-  const blog = await screen.findByText(/Maximize Distributed Users/i);
+  const blog = await screen.findByText('Maximize Distributed Users');
   expect(blog).toBeInTheDocument();
 });
